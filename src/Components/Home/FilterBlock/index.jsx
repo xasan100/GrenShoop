@@ -1,9 +1,19 @@
 /** @format */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Block, Text } from './style';
 
 const FilterBlock = () => {
+const [data, setData ]=useState()
+	useEffect(() => {
+		fetch(`https://greenshophorizontteam.herokuapp.com/product`)
+		  .then((res) => res.json())
+		  .then((res) => {
+			console.log(data);
+			setData(res)
+		  });
+	  }, []);
+	
 	return (
 		<Block>
 			<Block.Left>
