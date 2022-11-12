@@ -1,18 +1,31 @@
 /** @format */
 
-import React, { useEffect, useState } from 'react';
-import { Block, Text } from './style';
+import React, { useEffect, useReducer, useState } from 'react';
+import { Block,  Card, Text } from './style';
 
 const FilterBlock = () => {
 const [data, setData ]=useState()
-	useEffect(() => {
-		fetch(`https://greenshophorizontteam.herokuapp.com/product`)
-		  .then((res) => res.json())
-		  .then((res) => {
-			console.log(data);
-			setData(res)
-		  });
-	  }, []);
+
+useEffect(() => {
+	fetch("https://greenshophorizontteam.herokuapp.com/product")
+	  .then((res) => res.json())
+	  .then((res) => {
+		console.log(res,'res');
+		setData(res)
+	  });
+  }, []);
+
+
+const HousePlants=()=>{
+let res =data.filter((item)=>{
+return item.type==="houseplants"
+})
+setData(res)
+}
+
+
+
+
 	
 	return (
 		<Block>
@@ -20,7 +33,7 @@ const [data, setData ]=useState()
 				<Text size='16px' lineHeight='16px' fontWeight='700' color='#3D3D3D'>
 					Categories
 				</Text>
-				<Text
+				<Text onClick={HousePlants}
 					size='15px'
 					lineHeight='40px'
 					fontWeight='700'
@@ -101,7 +114,16 @@ const [data, setData ]=useState()
 					Accessories
 				</Text>
 			</Block.Left>
-			<Block.Right></Block.Right>
+			<Block.Right>  
+				{data?.map((value,ind)=>{
+					return (
+						<Card key={ind}> 
+						<img src={value?.img} height={250} width={250} alt="" />
+				        </Card>
+					)
+				})}
+
+			</Block.Right>
 		</Block>
 	);
 };
