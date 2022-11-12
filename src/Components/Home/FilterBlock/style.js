@@ -16,27 +16,18 @@ Block.Left = styled.div`
 `;
 Block.Right = styled.div`
     border: 1px solid red;
-     display: flex;
-    flex-wrap: wrap;
-
+display: grid;
+grid-template-columns: auto auto auto;
 `;
 
 const Card = styled.div`
-cursor: pointer;
-  background-color: #fbfbfb;
-  margin-bottom: 40px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-  .title {
-    padding-top: 5px;
-    padding-left: 15px;
-  }
-  .price {
-    color: #46a358;
-    font-weight: 700;
-    transform: translateY(-20px);
-  }
+>img {
+    border: 1px solid blue;
+    max-width: 250px;
+    max-height: 250px;
+
+    
+}
 `;
 
 const Text = styled.div`
