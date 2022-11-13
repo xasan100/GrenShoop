@@ -1,8 +1,8 @@
 /** @format */
 
 import React, { useEffect, useReducer, useState } from "react";
-import { Block, Box, Card, CenterText, PaginationAnt, Text } from "./style";
-
+import { Block, Box, BoxImg, Card, CenterText, ImgTop, PaginationAnt, Text } from "./style";
+import BootomImg  from "../../../Assets/image/image 12.png"
 const FilterBlock = () => {
   const [data, setData] = useState();
   const [fit, fitSet]=useState();
@@ -22,7 +22,6 @@ const FilterBlock = () => {
     });
     fitSet(res);
   };
-
 
   const Potterplants = () => {
     let res = data.filter((item) => { 
@@ -145,6 +144,10 @@ const FilterBlock = () => {
 	  <PaginationAnt current={current} onChange={onChange} total={50} />
         </div>
       </Block>
+  <BoxImg>
+    <h3>Super Sale</h3>
+  <ImgTop src={BootomImg}/>
+  </BoxImg>
     </Box>
   );
 };

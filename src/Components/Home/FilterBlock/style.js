@@ -5,6 +5,7 @@ const Box=styled.div`
 width: 100%;
 max-width: 1440px;
 margin: 0 auto;
+position: relative;
 `
 
 const Block = styled.div`
@@ -109,8 +110,32 @@ const PaginationAnt=styled(Pagination)`
 margin-bottom: 50px;
 margin-top:50px ;
 margin-left: 30px;
+`
+const BoxImg=styled.div`
+>h3{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 51px;
+line-height: 65px;
+/* identical to box height, or 127% */
+color: #46A358;
+text-align: center;
+}
+position: absolute;
+top: 550px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+width: 27%;
 
 
 `
 
-export { Block, Text,Card ,CenterText,PaginationAnt,Box};
+
+
+export const ImgTop=styled.img`
+width: 100%;
+`
+
+export { Block,BoxImg, Text,Card ,CenterText,PaginationAnt,Box};
