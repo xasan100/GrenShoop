@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import { Block, CaruselBox, Text, Img } from './style';
+import { Block, CaruselBox, Text, Img, Box } from './style';
 import { data } from '../../../Mock/data';
 import Button from '../../../Generic/Button';
 import { Carousel } from 'antd';
@@ -9,6 +9,7 @@ import { Carousel } from 'antd';
 export const Carusel = () => {
 
 	return (
+		<Box> 
 		<Block>
 			<Carousel autoplay>
 				{data.home.caruselData.map((value, id) => (
@@ -39,6 +40,7 @@ export const Carusel = () => {
 				))}
 			</Carousel>
 		</Block>
+		</Box>
 	);
 };
 

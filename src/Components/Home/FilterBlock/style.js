@@ -1,8 +1,13 @@
 import styled from 'styled-components';
+import { Pagination } from "antd";
 
+const Box=styled.div`
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+`
 
 const Block = styled.div`
-    border: 1px solid red;
     width: 100%;
     height: 900px;
     display: grid;
@@ -10,12 +15,10 @@ const Block = styled.div`
 
 `;
 Block.Left = styled.div`
-    border: 1px solid red;
     padding: 14px 18px;
 
 `;
 Block.Right = styled.div`
-    border: 1px solid red;
 display: grid;
 grid-template-columns: 4fr 4fr 4fr;
 grid-template-rows: 1fr 1fr 1fr;
@@ -75,7 +78,16 @@ const Text = styled.div`
 	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : 'none')};
 	display: ${({ span }) => (span ? 'inline-block' : 'block')};
 	margin: ${({ margin }) => (margin ? margin : '0 0')};
+    cursor: pointer;
+    :active{
+    color: #46A358;
+    }
+    :hover{
+        color: #46A358;
+
+    }
 `;
+
 
 const CenterText=styled.div`
 
@@ -88,6 +100,15 @@ line-height: 16px;
 color: #46A358;
 margin: 30px;
 text-align:center ;
+
+`
+ 
+const PaginationAnt=styled(Pagination)`
+margin-bottom: 50px;
+margin-top:50px ;
+margin-left: 30px;
+
+
 `
 
-export { Block, Text,Card ,CenterText};
+export { Block, Text,Card ,CenterText,PaginationAnt,Box};

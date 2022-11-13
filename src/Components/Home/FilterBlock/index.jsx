@@ -1,8 +1,7 @@
 /** @format */
 
-import { Pagination } from "antd";
 import React, { useEffect, useReducer, useState } from "react";
-import { Block, Card, CenterText, Text } from "./style";
+import { Block, Box, Card, CenterText, PaginationAnt, Text } from "./style";
 
 const FilterBlock = () => {
   const [data, setData] = useState();
@@ -22,7 +21,6 @@ const FilterBlock = () => {
       return item.type === "houseplants";
     });
     fitSet(res);
-	setActive("houseplants");
   };
 
 
@@ -31,7 +29,6 @@ const FilterBlock = () => {
       return item.type === "potterplants";
     });
     fitSet(res);
-	setActive("potterplants");
 
   };
   const Son = () => {
@@ -39,21 +36,18 @@ const FilterBlock = () => {
       return item.type === "bigplants";
     });
     fitSet(res);
-	setActive("bigplants");
   };
   const Smallplants = () => {
     let res = data.filter((item) => { 
       return item.type === "smallplants";
     });
     fitSet(res);
-	setActive("smallplants");
   };
   const Bigplants = () => {
     let res = data.filter((item) => { 
       return item.type === "bigplants" ;
     });
     fitSet(res);
-	setActive("bigplants");
   };
 
   const Gardening = () => {
@@ -61,14 +55,12 @@ const FilterBlock = () => {
       return item.type === "gardening";
     });
     fitSet(res);
-	setActive("gardening");
   };
   const onChange = (page) => {
        setCurrent(page===1 && HousePlants() ) || setCurrent(page===2 && Potterplants() )|| setCurrent(page===3 && Smallplants() )|| setCurrent(page===4 && Gardening() )||setCurrent(page===5 && Bigplants() );
   };
-console.log(active,'sdfs');
   return (
-    <>
+    <Box>
          <CenterText>ALL Plants</CenterText>
       <Block>
         <Block.Left>
@@ -149,10 +141,10 @@ console.log(active,'sdfs');
               );
             })}
           </Block.Right>
-	  <Pagination current={current} onChange={onChange} total={50} />
+	  <PaginationAnt current={current} onChange={onChange} total={50} />
         </div>
       </Block>
-    </>
+    </Box>
   );
 };
 

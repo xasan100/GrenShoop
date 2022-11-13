@@ -2,6 +2,12 @@
 
 import styled from 'styled-components';
 
+const Box=styled.div`
+width: 100%;
+max-width: 1440px;
+margin: 0 auto;
+`
+
 const Block = styled.div`
 	width: 100%;
 	height: 450px;
@@ -49,4 +55,4 @@ const Img = styled.img`
 `;
 
 
-export { Block, CaruselBox, Text, Img };
+export { Block, CaruselBox, Text, Img,Box};
