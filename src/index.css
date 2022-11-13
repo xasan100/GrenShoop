@@ -4,7 +4,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
+:root{
+  --primaryColor: #46A358;
+  --secondaryColor: #3D3D3D;
+  --thirdColor: #727272;
+}
+
 a{
   text-decoration: none;
 }

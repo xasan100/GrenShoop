@@ -8,7 +8,7 @@ const FilterBlock = () => {
   const [data, setData] = useState();
   const [fit, fitSet]=useState();
   const [current, setCurrent] = useState(3);
-
+  const [active, setActive] = useState("");
   useEffect(() => {
     fetch("https://greenshophorizontteam.herokuapp.com/product")
       .then((res) => res.json())
@@ -58,31 +58,9 @@ const FilterBlock = () => {
     fitSet(res);
   };
   const onChange = (page) => {
-if (setCurrent(page===1)) {
-	return HousePlants()
-}
-
-else if (setCurrent(page===2)) {
-	return Potterplants()
-}
-else if (setCurrent(page===3)) {
-	return Son()
-}
-else if (setCurrent(page===4)) {
-	return Smallplants()
-}
-  
-else if (setCurrent(page===5)) {
-	return Bigplants()
-}
-else return  Gardening()
+       setCurrent(page===1 && HousePlants() ) || setCurrent(page===2 && Potterplants() )|| setCurrent(page===3 && Smallplants() )|| setCurrent(page===4 && Gardening() )||setCurrent(page===5 && Bigplants() );
   };
 
-
-  //   "bigplants"
-//  "smallplants"
-// "gardening"
-// "57.99"
 console.log(fit,'dsrrw');
   return (
     <>
@@ -93,7 +71,8 @@ console.log(fit,'dsrrw');
           <Text size="16px" lineHeight="16px" fontWeight="700" color="#3D3D3D">
             Categories
           </Text>
-          <Text
+          <Text 
+		  
             onClick={HousePlants}
             size="15px"
             lineHeight="40px"
@@ -157,7 +136,8 @@ console.log(fit,'dsrrw');
 
 
 
-            {!data?'':fit?.map((value, ind) => {
+			
+            {fit?.map((value, ind) => {
               return (
                 <Card key={ind}>
                   <img src={value?.img} alt="" />
