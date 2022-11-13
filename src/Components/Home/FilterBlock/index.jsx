@@ -8,7 +8,6 @@ const FilterBlock = () => {
   const [data, setData] = useState();
   const [fit, fitSet]=useState();
   const [current, setCurrent] = useState(3);
-  const [active, setActive] = useState("");
   useEffect(() => {
     fetch("https://greenshophorizontteam.herokuapp.com/product")
       .then((res) => res.json())
@@ -23,6 +22,7 @@ const FilterBlock = () => {
       return item.type === "houseplants";
     });
     fitSet(res);
+	setActive("houseplants");
   };
 
 
@@ -31,24 +31,29 @@ const FilterBlock = () => {
       return item.type === "potterplants";
     });
     fitSet(res);
+	setActive("potterplants");
+
   };
   const Son = () => {
     let res= data.filter((item) => { 
       return item.type === "bigplants";
     });
     fitSet(res);
+	setActive("bigplants");
   };
   const Smallplants = () => {
     let res = data.filter((item) => { 
       return item.type === "smallplants";
     });
     fitSet(res);
+	setActive("smallplants");
   };
   const Bigplants = () => {
     let res = data.filter((item) => { 
       return item.type === "bigplants" ;
     });
     fitSet(res);
+	setActive("bigplants");
   };
 
   const Gardening = () => {
@@ -56,15 +61,14 @@ const FilterBlock = () => {
       return item.type === "gardening";
     });
     fitSet(res);
+	setActive("gardening");
   };
   const onChange = (page) => {
        setCurrent(page===1 && HousePlants() ) || setCurrent(page===2 && Potterplants() )|| setCurrent(page===3 && Smallplants() )|| setCurrent(page===4 && Gardening() )||setCurrent(page===5 && Bigplants() );
   };
-
-console.log(fit,'dsrrw');
+console.log(active,'sdfs');
   return (
     <>
-      {" "}
          <CenterText>ALL Plants</CenterText>
       <Block>
         <Block.Left>
@@ -72,7 +76,6 @@ console.log(fit,'dsrrw');
             Categories
           </Text>
           <Text 
-		  
             onClick={HousePlants}
             size="15px"
             lineHeight="40px"
@@ -82,7 +85,8 @@ console.log(fit,'dsrrw');
           >
             House Plants
           </Text>
-          <Text onClick={Potterplants}
+          <Text 
+		  onClick={Potterplants}
             size="15px"
             lineHeight="40px"
             fontWeight="700"
@@ -91,7 +95,8 @@ console.log(fit,'dsrrw');
           >
             Potter Plants
           </Text>
-          <Text onClick={Son}
+          <Text 
+		    onClick={Son}
             size="15px"
             lineHeight="40px"
             fontWeight="700"
@@ -100,7 +105,8 @@ console.log(fit,'dsrrw');
           >
             Seeds
           </Text>
-          <Text onClick={Smallplants}
+          <Text 
+		    onClick={Smallplants}
             size="15px"
             lineHeight="40px"
             fontWeight="700"
@@ -109,7 +115,8 @@ console.log(fit,'dsrrw');
           >
             Small Plants
           </Text>
-          <Text onClick={Bigplants}
+          <Text 
+		    onClick={Bigplants}
             size="15px"
             lineHeight="40px"
             fontWeight="700"
@@ -118,10 +125,8 @@ console.log(fit,'dsrrw');
           >
             Big Plants
           </Text>
-         
-        
-         
-          <Text onClick={Gardening}
+          <Text 
+		    onClick={Gardening}
             size="15px"
             lineHeight="40px"
             fontWeight="700"
@@ -133,9 +138,6 @@ console.log(fit,'dsrrw');
         </Block.Left>
         <div>
           <Block.Right>
-
-
-
 			
             {fit?.map((value, ind) => {
               return (
@@ -150,7 +152,6 @@ console.log(fit,'dsrrw');
 	  <Pagination current={current} onChange={onChange} total={50} />
         </div>
       </Block>
-
     </>
   );
 };

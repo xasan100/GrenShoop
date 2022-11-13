@@ -47,11 +47,10 @@ font-size: 16px;
 line-height: 16px;  
 padding-left: 20px ;
 
-.active {
-      color: var(--primaryColor);
-    }
+
 
 }
+
 
 >img {
  width: 270px;
