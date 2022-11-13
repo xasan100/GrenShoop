@@ -6,10 +6,11 @@ const Box=styled.div`
 width: 100%;
 max-width: 1440px;
 margin: 0 auto;
+background: rgb(95,172,110);
+background: linear-gradient(90deg, rgba(95,172,110,1) 0%, rgba(70,163,88,1) 50%, rgba(195,212,210,1) 100%);
 `
 
 const Block = styled.div`
-	width: 100%;
 	height: 450px;
 	margin: 12px 0;
 	li {

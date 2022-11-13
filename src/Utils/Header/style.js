@@ -6,6 +6,13 @@ import { NavLink } from 'react-router-dom';
 import { ReactComponent as zoom } from '../../Assets/icons/zoom.svg';
 import { ReactComponent as trash } from '../../Assets/icons/trash.svg';
 
+
+const Box= styled.div`
+max-width: 1440px;
+width: 100%;
+margin:0 auto;
+
+`
 const Block = styled.div`
 	height: 78px;
 	border-bottom: 0.3px solid rgba(70, 163, 88, 0.5);
@@ -80,4 +87,4 @@ Block.TrashImg = styled(trash)`
 	cursor: pointer;
 `;
 
-export { Block, LinkNav };
+export { Block, LinkNav,Box };

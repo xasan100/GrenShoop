@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useContext } from 'react';
-import { Block, LinkNav } from './style';
+import { Block, Box, LinkNav } from './style';
 import Button from '../../Generic/Button';
 import logout from '../../Assets/icons/logout.svg';
 import { contextAllProdect } from '../../Context/AllProduct';
@@ -17,6 +17,7 @@ const Header = () => {
 	}
 
 	return (
+		<Box> 
 		<Block>
 			<Block.Left onClick={linkLogo}>
 				<Block.Logo />
@@ -36,6 +37,7 @@ const Header = () => {
 				<Button img={logout}>Login</Button>
 			</Block.Right>
 		</Block>
+		</Box>
 	);
 };
 

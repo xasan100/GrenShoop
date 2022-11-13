@@ -8,13 +8,13 @@ const FilterBlock = () => {
   const [fit, fitSet]=useState();
   const [current, setCurrent] = useState(3);
   useEffect(() => {
-    fetch("https://greenshophorizontteam.herokuapp.com/product")
+    fetch(`https://greenshophorizontteam.herokuapp.com/product`)
       .then((res) => res.json())
       .then((res) => {
-
-        setData(res);
+      setData(res )
       });
   }, []);
+
 
   const HousePlants = () => {
     let res = data.filter((item) => { 
@@ -75,7 +75,7 @@ const FilterBlock = () => {
             color="#3D3D3D"
             margin="10px 13px"
           >
-            House Plants
+            House Plants  <p>(4)</p>
           </Text>
           <Text 
 		  onClick={Potterplants}
@@ -84,8 +84,9 @@ const FilterBlock = () => {
             fontWeight="700"
             color="#3D3D3D"
             margin="10px 13px"
+
           >
-            Potter Plants
+            Potter Plants  <p>(6)</p>
           </Text>
           <Text 
 		    onClick={Son}
@@ -95,7 +96,7 @@ const FilterBlock = () => {
             color="#3D3D3D"
             margin="10px 13px"
           >
-            Seeds
+            Seeds<p>(10)</p>
           </Text>
           <Text 
 		    onClick={Smallplants}
@@ -105,7 +106,7 @@ const FilterBlock = () => {
             color="#3D3D3D"
             margin="10px 13px"
           >
-            Small Plants
+            Small Plants  <p>(11)</p>
           </Text>
           <Text 
 		    onClick={Bigplants}
@@ -115,7 +116,7 @@ const FilterBlock = () => {
             color="#3D3D3D"
             margin="10px 13px"
           >
-            Big Plants
+            Big Plants<p>(10)</p>
           </Text>
           <Text 
 		    onClick={Gardening}
@@ -125,7 +126,7 @@ const FilterBlock = () => {
             color="#3D3D3D"
             margin="10px 13px"
           >
-            Gardening
+            Gardening  <p>(12)</p>
           </Text>
         </Block.Left>
         <div>

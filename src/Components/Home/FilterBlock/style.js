@@ -78,6 +78,8 @@ const Text = styled.div`
 	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : 'none')};
 	display: ${({ span }) => (span ? 'inline-block' : 'block')};
 	margin: ${({ margin }) => (margin ? margin : '0 0')};
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     :active{
     color: #46A358;
