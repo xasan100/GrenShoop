@@ -17,14 +17,48 @@ Block.Left = styled.div`
 Block.Right = styled.div`
     border: 1px solid red;
 display: grid;
-grid-template-columns: auto auto auto;
+grid-template-columns: 4fr 4fr 4fr;
+grid-template-rows: 1fr 1fr 1fr;
+padding: 30px 30px;
+gap: 30px;
 `;
 
 const Card = styled.div`
+background: #FBFBFB;
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+>h3{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 16px;
+color: #46A358;
+padding-left: 20px;
+
+}
+
+>p{
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 16px;  
+padding-left: 20px ;
+}
+
 >img {
-    border: 1px solid blue;
-    max-width: 250px;
-    max-height: 250px;
+ width: 270px;
+ height: 270px;
+ max-width: 100%;
+ margin: 0 auto;
+ display:  flex;
+ justify-content: center;
+align-items: center;
+cursor: pointer;
+
+
 
     
 }
@@ -39,5 +73,17 @@ const Text = styled.div`
 	margin: ${({ margin }) => (margin ? margin : '0 0')};
 `;
 
+const CenterText=styled.div`
 
-export { Block, Text,Card };
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 16px;
+/* identical to box height, or 107% */
+color: #46A358;
+margin: 30px;
+text-align:center ;
+`
+
+export { Block, Text,Card ,CenterText};
