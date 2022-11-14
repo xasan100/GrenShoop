@@ -110,6 +110,7 @@ const PaginationAnt=styled(Pagination)`
 margin-bottom: 50px;
 margin-top:50px ;
 margin-left: 30px;
+
 `
 const BoxImg=styled.div`
 >h3{
@@ -118,7 +119,6 @@ font-style: normal;
 font-weight: 400;
 font-size: 51px;
 line-height: 65px;
-/* identical to box height, or 127% */
 color: #46A358;
 text-align: center;
 }
@@ -128,7 +128,6 @@ left: 0px;
 right: 0px;
 bottom: 0px;
 width: 27%;
-
 
 `
 
