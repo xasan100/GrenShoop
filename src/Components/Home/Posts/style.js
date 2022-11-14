@@ -65,5 +65,6 @@ font-size: 14px;
 line-height: 22px;
 color: #727272;   
 }
+
 `
 export {Blog,Product,Text,TextBox}

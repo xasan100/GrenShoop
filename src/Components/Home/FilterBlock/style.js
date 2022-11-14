@@ -13,6 +13,7 @@ const Block = styled.div`
     height: 900px;
     display: grid;
     grid-template-columns: 310px 1fr;
+    position: relative;
 
 `;
 Block.Left = styled.div`
@@ -114,6 +115,11 @@ const PaginationAnt=styled(Pagination)`
 margin-bottom: 50px;
 margin-top:50px ;
 margin-left: 30px;
+position: absolute;
+top: 1550px;
+left: 310px;
+right: 0px;
+bottom: 0px;
 
 `
 const BoxImg=styled.div`
