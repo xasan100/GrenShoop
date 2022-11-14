@@ -1,7 +1,8 @@
 import React from 'react'
-import { Blog, Container, Product } from './style'
+import { Blog, Container, Product, TextBox } from './style'
 import Gul1 from "../../../Assets/image/Category.png"
 import Gul2 from "../../../Assets/image/Category2.png"
+import Button from '../../../Generic/Button'
 
 
 export const Categoris = () => {
@@ -25,10 +26,21 @@ export const Categoris = () => {
 <h3>Watering Graden</h3>
 <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
 </Product>
-
-
 </Container>
-<div>23</div>
+
+<TextBox>
+  <h3>Would you like to join newsletters?</h3>
+<div>
+<input type="text" placeholder='enter your email addre....'/>
+<Button>Join</Button>
+ </div>
+ <div>
+<p>
+We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours! 
+</p>
+ </div>
+
+</TextBox>
 
     </Blog>
   )
