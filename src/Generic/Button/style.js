@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Block = styled.div`
 	min-width: 100px;
-	width: ${({ width }) => (width ? `${width}px ` : '100px')};
+	width: ${({ width }) => (width ?  width : '100px')};
 	height: 35px;
 	padding: 8px 17px;
 	background: #46a358;

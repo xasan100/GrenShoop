@@ -9,7 +9,6 @@ margin: 0 auto;
 margin-top: 800px;
 `
 const Box1 =styled.div`
-border: 1px solid red;
 width: 100%;
 >div{
     display: flex   ;
@@ -34,14 +33,11 @@ font-weight: 400;
 font-size: 16px;
 line-height: 16px;
 /* identical to box height, or 100% */
-
-
 color: #3D3D3D;
 }
 
 `
 const Box2 =styled.div`
-border: 1px solid red;
 width: 100%;
 >div{ display: flex   ;
     justify-content: space-evenly;
