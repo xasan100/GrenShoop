@@ -32,6 +32,9 @@ background: #FBFBFB;
 box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  :hover{
+    border: 1px solid  #46A358; ;
+}
 >h3{
 font-family: 'Inter';
 font-style: normal;
@@ -65,6 +68,7 @@ padding-left: 20px ;
  justify-content: center;
 align-items: center;
 cursor: pointer;
+
 
 
 

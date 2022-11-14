@@ -3,18 +3,50 @@ const Bloclk=styled.div`
 display: grid;
 grid-template-columns: auto auto;
 height: auto;
-background-color: blue;
 max-width: 1440px;
 width: 100%;
 margin: 0 auto;
-margin-top: 500px;
+margin-top: 800px;
 `
 const Box1 =styled.div`
 border: 1px solid red;
 width: 100%;
+>div{
+    display: flex   ;
+    justify-content: space-evenly;
+    align-items: center;
+}
+`
+const  TextBox=styled.div`
+>h3{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 40px;
+line-height: 20px;
+text-transform: uppercase;
+color:#70b77c;
+}
+>p{
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 16px;
+/* identical to box height, or 100% */
+
+
+color: #3D3D3D;
+}
+
 `
 const Box2 =styled.div`
 border: 1px solid red;
 width: 100%;
+>div{ display: flex   ;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
 `
-export { Bloclk,Box1,Box2};
+export { Bloclk,Box1,Box2,TextBox};

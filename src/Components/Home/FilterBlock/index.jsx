@@ -135,8 +135,8 @@ const FilterBlock = () => {
               return (
                 <Card key={ind}>
                   <img src={value?.img} alt="" />
-				  <p> {value?.title}</p>
-				  <h3>${value?.price}</h3>
+				    <p> {value?.title}</p>
+				     <h3>${value?.price}</h3>
                 </Card>
               );
             })}
