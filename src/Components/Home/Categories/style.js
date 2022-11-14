@@ -8,10 +8,12 @@ margin: 0 auto;
 background: #FBFBFB;
 display: grid;
 grid-template-columns: auto auto ;
+gap: 0px 20px;
 `
 const Container=styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr ;
+gap: 0px 20px ;
 `
 const Product=styled.div`
 padding-left: 40px;

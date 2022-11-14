@@ -8,6 +8,7 @@ import Home from '../Pages/Home';
 import PlantCare from '../Pages/PlantCare';
 import Shop from '../Pages/Shop';
 import Header from '../Utils/Header';
+import Footer from '../Utils/Footer';
 
 
 export const Root = () => {
@@ -25,6 +26,7 @@ export const Root = () => {
 				<Route path='/Plantcare' element={<PlantCare />} />
 				<Route path='/shop' element={<Shop />} />
 			</Routes>
+			<Footer/>
 		</Block>
 	);
 };
