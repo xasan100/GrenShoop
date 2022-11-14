@@ -12,10 +12,7 @@ import Header from '../Utils/Header';
 
 export const Root = () => {
 
-	// const navigate = useNavigate();
-	// useEffect(() => {
-	// 	navigate('/home')
-	// }, [])
+
 	
 
 	return (
