@@ -3,7 +3,9 @@
 import React, { useEffect, useReducer, useState } from "react";
 import { Block, Box, BoxImg, Card, CenterText, ImgTop, PaginationAnt, Text } from "./style";
 import BootomImg  from "../../../Assets/image/image 12.png"
+import { Navigate, useNavigate } from "react-router-dom";
 const FilterBlock = () => {
+  const navigate= useNavigate()
   const [data, setData] = useState();
   const [fit, fitSet]=useState();
   const [current, setCurrent] = useState(3);
@@ -131,17 +133,17 @@ const FilterBlock = () => {
         <div>
           <Block.Right>
 			
-            {fit?.map((value, ind) => {
+            {data?.map((value, ind) => {
               return (
-                <Card key={ind}>
+                <Card  onClick={() => navigate(`/products/${value.id}`) } key={ind}>
                   <img src={value?.img} alt="" />
-				    <p> {value?.title}</p>
+				     <p> {value?.title}</p>
 				     <h3>${value?.price}</h3>
                 </Card>
               );
             })}
           </Block.Right>
-	  <PaginationAnt current={current} onChange={onChange} total={50} />
+	      <PaginationAnt current={current} onChange={onChange} total={50} />
         </div>
       </Block>
   <BoxImg>

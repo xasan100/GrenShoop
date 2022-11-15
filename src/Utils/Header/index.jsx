@@ -1,11 +1,13 @@
 /** @format */
 
 import React, { useContext } from 'react';
-import { Block, Box, LinkNav } from './style';
+import { Block, Box, Btnpush, LinkNav } from './style';
 import Button from '../../Generic/Button';
 import logout from '../../Assets/icons/logout.svg';
 import { contextAllProdect } from '../../Context/AllProduct';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
+
+
 
 const Header = () => {
 	const [state] = useContext(contextAllProdect);
@@ -17,6 +19,7 @@ const Header = () => {
 	}
 
 	return (
+		<> 
 		<Box> 
 		<Block>
 			<Block.Left onClick={linkLogo}>
@@ -34,10 +37,12 @@ const Header = () => {
 					<Block.TrashImg />
 					<Block.TrashValue>{state}</Block.TrashValue>
 				</Block.ZoomBlock>
-				<Button img={logout}>Login</Button>
+				<Btnpush onClick={()=>navigate('/login')}> <img src={logout}/> Login</Btnpush>
 			</Block.Right>
 		</Block>
 		</Box>
+	
+		</>
 	);
 };
 

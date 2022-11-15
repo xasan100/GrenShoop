@@ -62,6 +62,7 @@ const LinkNav = styled(NavLink)`
 `;
 Block.ZoomBlock = styled.div`
 	position: relative;
+
 `;
 
 Block.ZoomImg = styled(zoom)`
@@ -86,5 +87,21 @@ Block.TrashValue = styled.div`
 Block.TrashImg = styled(trash)`
 	cursor: pointer;
 `;
-
-export { Block, LinkNav,Box };
+const Btnpush=styled.button`
+ 	height: 35px;
+	padding: 8px 17px;
+	background: #46a358;
+	border-radius: 6px;
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	border:none;
+	color: #ffff;
+	cursor:pointer;
+`
+export { Block, LinkNav,Box ,Btnpush};
